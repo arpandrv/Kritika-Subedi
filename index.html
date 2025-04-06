@@ -1,118 +1,919 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>portfolio</title>
-  </head>
-  <body>
-    <nav>
-      <div class="nav__content">
-        <div class="logo"><a href="#">Kritika</a></div>
-        <label for="check" class="checkbox">
-          <i class="ri-menu-line"></i>
-        </label>
-        <input type="checkbox" name="check" id="check" />
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#project">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Kritika Subedi - Full Stack Developer specializing in web development, AI/ML, and innovative solutions">
+  <meta name="keywords" content="Kritika Subedi, portfolio, web developer, full stack, AI, ML, machine learning, projects">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kritika Subedi - Full Stack Developer">
+  <meta property="og:description" content="Innovative developer creating impactful solutions with modern technologies">
+  <meta property="og:image" content="assets/profile.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Kritika Subedi - Full Stack Developer">
+  <meta property="twitter:description" content="Innovative developer creating impactful solutions with modern technologies">
+  <meta property="twitter:image" content="assets/profile.png">
+  
+  <title>Kritika Subedi | Portfolio</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.ico">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Kritika Subedi</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-primary rounded-pill ms-3" id="themeSwitcher">
+              <i class="bi bi-moon-fill" id="themeIcon"></i>
+            </button>
+          </li>
         </ul>
       </div>
-    </nav>
-    <section class="section" id="Home">
-      <div class="section__container">
-        <div class="content">
-          <p class="subtitle">HELLO</p>
-          <h1 class="title">
-            I'm <span>Kritika<br />
-          </h1>
-          <p class="description">
-            Exploring web development to build interactive applications that integrate ML models. With a growing foundation in AI/ML, I enjoy learning, experimenting, and applying technology to solve real-world problems. Actively involved in tech communities, sharing knowledge, organizing events, and fostering collaboration. Always eager to grow and contribute to innovative solutions.
-          </p>
-          <div class="action__btns">
-            <button class="hire__me">Hire Me</button>
-            <button class="portfolio">Resume</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero vh-100 d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="typewriter mb-3">
+            <span id="typewriter-text"></span><span class="cursor">|</span>
+          </div>
+          <h1 class="display-4 fw-bold mb-4">I'm <span class="highlight">Kritika Subedi</span></h1>
+          <p class="lead mb-4">Full Stack Developer passionate about creating impactful digital experiences. Specialized in modern web technologies, AI/ML integration, and user-centered design.</p>
+          <div class="d-flex gap-3">
+            <a href="#contact" class="btn btn-primary btn-lg rounded-pill">Get In Touch</a>
+            <a href="#" class="btn btn-outline-primary btn-lg rounded-pill" id="downloadResume">Download CV</a>
           </div>
         </div>
-        <div class="image">
-          <img src="assets/profile.jpeg" alt="profile" />
-        </div>
-      </div>
-    </section>
-    <section class="section" id="about">
-        <div class="about-col-1">
-          <img src="assets/profile.jpeg" alt="About Image" />
-        </div>
-        <div class="about-col-2">
-            <h2 class="title">About Me</h2>
-            <p class="description">
-              Passionate beginner in AI, ML with a foundational understanding of supervised and unsupervised learning algorithms. Enthusiastic about exploring innovative solutions and eager to deepen knowledge through hands-on projects and mentorship. Driven by curiosity to build impactful systems and contribute to the tech community.
-            </p>
-        </div>
-      
-      </section>
-  
-      <section class="section" id="skills">
-        <div class="section__container">
-          <div class="content">
-            <h2 class="title">Skills</h2>
-            <p class="description"><strong>Languages:</strong> Python, C, JavaScript</p>
-            <p class="description"><strong>Database:</strong> SQL</p>
-            <p class="description"><strong>Libraries:</strong> Numpy, Pandas, Matplotlib</p>
-            <p class="description"><strong>Framework:</strong> TensorFlow</p>
-            <p class="description"><strong>Version Control:</strong> Git / GitHub</p>
-            <p class="description"><strong>Operating System:</strong> Linux</p>
-          </div>
-        </div>
-      </section>
-  
-      <section class="section" id="projects">
-        <div class="section__container">
-          <div class="content">
-            <h2 class="title">Projects</h2>
-            <p class="description">
-              <strong>Customer Churn Prediction:</strong> Developed a model using logistic regression and random forests. Preprocessed data, engineered features, and evaluated model performance with accuracy and recall.
-            </p>
-            <p class="description">
-              <strong>Medical Insurance Cost Prediction:</strong> Built a Linear Regression model to predict insurance costs based on age, BMI, and smoking status. Applied data preprocessing and model evaluation using Pandas, NumPy, and Scikit-learn.
-            </p>
-            <p class="description">
-              <strong>MNIST Digit Classification:</strong> Utilized CNNs for feature extraction and implemented the model in Python using TensorFlow.
-            </p>
-          </div>
-        </div>
-      </section>
-  
-      <section id="contact">
-        <div class="contact-container">
-          <div class="contact-left">
-            <h2>Contact Me</h2>
-            <p><i class="ri-mail-line"></i> kritika@example.com</p>
-            <p><i class="ri-phone-line"></i> +123 456 7890</p>
-            <div class="social-icons">
-              <a href="#"><i class="ri-github-line"></i></a>
-              <a href="#"><i class="ri-linkedin-box-line"></i></a>
-              <a href="#"><i class="ri-twitter-line"></i></a>
+        <div class="col-lg-6 text-center" data-aos="fade-left">
+          <div class="hero-img-container">
+            <img src="assets/profile.png" alt="Kritika Subedi" class="img-fluid hero-img">
+            <div class="floating-icon" style="top: 20%; left: 0;">
+              <i class="bi bi-braces-asterisk"></i>
+            </div>
+            <div class="floating-icon" style="top: 30%; right: 0;">
+              <i class="bi bi-code-slash"></i>
+            </div>
+            <div class="floating-icon" style="bottom: 20%; left: 10%;">
+              <i class="bi bi-database-fill"></i>
             </div>
           </div>
-          <div class="contact-right">
-            <form>
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-              <textarea rows="6" placeholder="Your Message"></textarea>
-              <button type="submit" class="btn2">Send</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section-padding">
+    <div class="container" data-aos="fade-up">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-8 text-center">
+          <h6 class="text-primary fw-bold">ABOUT ME</h6>
+          <h2 class="section-title">Know Me Better</h2>
+          <div class="separator mx-auto"></div>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <img src="assets/profile.jpeg" alt="Kritika Subedi" class="img-fluid rounded-4 about-img" data-aos="fade-right">
+        </div>
+        <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
+          <h3 class="mb-3">Full Stack Developer & AI Enthusiast</h3>
+          <p class="lead">Hello! I'm Kritika, a passionate full stack developer with expertise in modern web technologies and artificial intelligence.</p>
+          <p>With over 5 years of experience in building robust applications, I've developed a deep understanding of both frontend and backend technologies. I enjoy solving complex problems and turning innovative ideas into reality.</p>
+          <p>My journey in tech began when I developed my first application during college, and since then, I've been constantly learning and expanding my skill set. When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge through tech blogs.</p>
+          
+          <div class="row mt-4 g-4">
+            <div class="col-md-6">
+              <div class="about-info d-flex align-items-center">
+                <i class="bi bi-envelope-fill me-3"></i>
+                <div>
+                  <h6 class="mb-0">Email</h6>
+                  <p class="mb-0">contact@kritikasubedi.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="about-info d-flex align-items-center">
+                <i class="bi bi-geo-alt-fill me-3"></i>
+                <div>
+                  <h6 class="mb-0">Location</h6>
+                  <p class="mb-0">San Francisco, CA</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="about-info d-flex align-items-center">
+                <i class="bi bi-briefcase-fill me-3"></i>
+                <div>
+                  <h6 class="mb-0">Experience</h6>
+                  <p class="mb-0">5+ Years</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="about-info d-flex align-items-center">
+                <i class="bi bi-translate me-3"></i>
+                <div>
+                  <h6 class="mb-0">Languages</h6>
+                  <p class="mb-0">English, Spanish</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-4">
+            <a href="#skills" class="btn btn-primary rounded-pill">My Skills</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section-padding bg-light">
+    <div class="container" data-aos="fade-up">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-8 text-center">
+          <h6 class="text-primary fw-bold">MY SPECIALIZATIONS</h6>
+          <h2 class="section-title">My Skills & Technologies</h2>
+          <div class="separator mx-auto"></div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="skills-card">
+            <div class="skills-icon">
+              <i class="bi bi-code-square"></i>
+            </div>
+            <h4>Frontend Development</h4>
+            <div class="progress-wrapper">
+              <div class="mb-3">
+                <div class="d-flex justify-content-between">
+                  <h6 class="mb-1">React.js</h6>
+                  <span>90%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="d-flex justify-content-between">
+                  <h6 class="mb-1">Vue.js</h6>
+                  <span>85%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="d-flex justify-content-between">
+                  <h6 class="mb-1">JavaScript</h6>
+                  <span>95%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div>
+                <div class="d-flex justify-content-between">
+                  <h6 class="mb-1">HTML/CSS</h6>
+                  <span>98%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="skills-card">
+            <div class="skills-icon">
+              <i class="bi bi-server"></i>
+            </div>
+            <h4>Backend Development</h4>
+            <div class="progress-wrapper">
+              <div class="mb-3">
+                <div class="d-flex justify-content-between">
+                  <h6 class="mb-1">Node.js</h6>
+                  <span>88%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="d-flex justify-content-between">
+                  <h6 class="mb-1">Python</h6>
+                  <span>92%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="d-flex justify-content-between">
+                  <h6 class="mb-1">Django</h6>
+                  <span>85%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div>
+                <div class="d-flex justify-content-between">
+                  <h6 class="mb-1">PHP</h6>
+                  <span>75%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="skills-card">
+            <div class="skills-icon">
+              <i class="bi bi-hdd-network"></i>
+            </div>
+            <h4>Data & DevOps</h4>
+            <div class="progress-wrapper">
+              <div class="mb-3">
+                <div class="d-flex justify-content-between">
+                  <h6 class="mb-1">SQL/NoSQL</h6>
+                  <span>90%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="d-flex justify-content-between">
+                  <h6 class="mb-1">Docker</h6>
+                  <span>82%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="d-flex justify-content-between">
+                  <h6 class="mb-1">AWS</h6>
+                  <span>78%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div>
+                <div class="d-flex justify-content-between">
+                  <h6 class="mb-1">TensorFlow</h6>
+                  <span>75%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mt-4 justify-content-center">
+        <div class="col-lg-10">
+          <div class="tech-stack-container" data-aos="fade-up" data-aos-delay="400">
+            <h4 class="text-center mb-4">Technologies I Work With</h4>
+            <div class="tech-icons d-flex flex-wrap justify-content-center gap-4">
+              <div class="tech-icon" data-bs-toggle="tooltip" title="React">
+                <i class="bi bi-filetype-jsx"></i>
+              </div>
+              <div class="tech-icon" data-bs-toggle="tooltip" title="Vue.js">
+                <i class="bi bi-filetype-vue"></i>
+              </div>
+              <div class="tech-icon" data-bs-toggle="tooltip" title="Node.js">
+                <i class="bi bi-filetype-js"></i>
+              </div>
+              <div class="tech-icon" data-bs-toggle="tooltip" title="Python">
+                <i class="bi bi-filetype-py"></i>
+              </div>
+              <div class="tech-icon" data-bs-toggle="tooltip" title="MongoDB">
+                <i class="bi bi-database"></i>
+              </div>
+              <div class="tech-icon" data-bs-toggle="tooltip" title="PostgreSQL">
+                <i class="bi bi-database-fill"></i>
+              </div>
+              <div class="tech-icon" data-bs-toggle="tooltip" title="Docker">
+                <i class="bi bi-box-seam"></i>
+              </div>
+              <div class="tech-icon" data-bs-toggle="tooltip" title="Git">
+                <i class="bi bi-git"></i>
+              </div>
+              <div class="tech-icon" data-bs-toggle="tooltip" title="AWS">
+                <i class="bi bi-cloud"></i>
+              </div>
+              <div class="tech-icon" data-bs-toggle="tooltip" title="TensorFlow">
+                <i class="bi bi-cpu"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section-padding">
+    <div class="container" data-aos="fade-up">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-8 text-center">
+          <h6 class="text-primary fw-bold">MY WORK</h6>
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="separator mx-auto"></div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-12 mb-5">
+          <div class="project-filter d-flex justify-content-center flex-wrap gap-2">
+            <button class="btn btn-outline-primary active" data-filter="all">All</button>
+            <button class="btn btn-outline-primary" data-filter="web">Web Development</button>
+            <button class="btn btn-outline-primary" data-filter="mobile">Mobile Apps</button>
+            <button class="btn btn-outline-primary" data-filter="ai">AI/ML</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row g-4 project-container">
+        <!-- Project 1 -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="web" data-aos="fade-up">
+          <div class="project-card">
+            <div class="project-img">
+              <img src="https://via.placeholder.com/600x400.png?text=E-Commerce+Platform" alt="E-Commerce Platform" class="img-fluid">
+              <div class="project-overlay">
+                <div class="project-overlay-content">
+                  <a href="#" class="btn btn-sm btn-primary rounded-pill me-2" data-bs-toggle="modal" data-bs-target="#projectModal1">Details</a>
+                  <a href="#" class="btn btn-sm btn-outline-light rounded-pill">Live Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="badge bg-primary">React</span>
+                <span class="badge bg-secondary">Node.js</span>
+                <span class="badge bg-info">MongoDB</span>
+              </div>
+              <h5>E-Commerce Platform</h5>
+              <p>A full-featured online store with product management, cart functionality, and payment processing.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="ai" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-card">
+            <div class="project-img">
+              <img src="https://via.placeholder.com/600x400.png?text=AI+Image+Analyzer" alt="AI Image Analyzer" class="img-fluid">
+              <div class="project-overlay">
+                <div class="project-overlay-content">
+                  <a href="#" class="btn btn-sm btn-primary rounded-pill me-2" data-bs-toggle="modal" data-bs-target="#projectModal2">Details</a>
+                  <a href="#" class="btn btn-sm btn-outline-light rounded-pill">Live Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="badge bg-primary">Python</span>
+                <span class="badge bg-secondary">TensorFlow</span>
+                <span class="badge bg-info">Flask</span>
+              </div>
+              <h5>AI Image Analyzer</h5>
+              <p>Machine learning application that analyzes images to identify objects, scenes, and patterns.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="mobile" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-card">
+            <div class="project-img">
+              <img src="https://via.placeholder.com/600x400.png?text=Fitness+Tracker+App" alt="Fitness Tracker App" class="img-fluid">
+              <div class="project-overlay">
+                <div class="project-overlay-content">
+                  <a href="#" class="btn btn-sm btn-primary rounded-pill me-2" data-bs-toggle="modal" data-bs-target="#projectModal3">Details</a>
+                  <a href="#" class="btn btn-sm btn-outline-light rounded-pill">Live Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="badge bg-primary">React Native</span>
+                <span class="badge bg-secondary">Firebase</span>
+                <span class="badge bg-info">Redux</span>
+              </div>
+              <h5>Fitness Tracker App</h5>
+              <p>Mobile application for tracking workouts, nutrition, and health metrics with personalized recommendations.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 4 -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="web" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-card">
+            <div class="project-img">
+              <img src="https://via.placeholder.com/600x400.png?text=Real+Estate+Platform" alt="Real Estate Platform" class="img-fluid">
+              <div class="project-overlay">
+                <div class="project-overlay-content">
+                  <a href="#" class="btn btn-sm btn-primary rounded-pill me-2" data-bs-toggle="modal" data-bs-target="#projectModal4">Details</a>
+                  <a href="#" class="btn btn-sm btn-outline-light rounded-pill">Live Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="badge bg-primary">Vue.js</span>
+                <span class="badge bg-secondary">Express</span>
+                <span class="badge bg-info">PostgreSQL</span>
+              </div>
+              <h5>Real Estate Platform</h5>
+              <p>Property listing and management system with search, filtering, and virtual tour capabilities.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 5 -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="ai" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-card">
+            <div class="project-img">
+              <img src="https://via.placeholder.com/600x400.png?text=Smart+Assistant" alt="Smart Assistant" class="img-fluid">
+              <div class="project-overlay">
+                <div class="project-overlay-content">
+                  <a href="#" class="btn btn-sm btn-primary rounded-pill me-2" data-bs-toggle="modal" data-bs-target="#projectModal5">Details</a>
+                  <a href="#" class="btn btn-sm btn-outline-light rounded-pill">Live Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="badge bg-primary">Python</span>
+                <span class="badge bg-secondary">NLP</span>
+                <span class="badge bg-info">FastAPI</span>
+              </div>
+              <h5>Smart Assistant</h5>
+              <p>AI-powered virtual assistant capable of natural language understanding and task automation.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 6 -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="mobile" data-aos="fade-up" data-aos-delay="500">
+          <div class="project-card">
+            <div class="project-img">
+              <img src="https://via.placeholder.com/600x400.png?text=Travel+Companion" alt="Travel Companion" class="img-fluid">
+              <div class="project-overlay">
+                <div class="project-overlay-content">
+                  <a href="#" class="btn btn-sm btn-primary rounded-pill me-2" data-bs-toggle="modal" data-bs-target="#projectModal6">Details</a>
+                  <a href="#" class="btn btn-sm btn-outline-light rounded-pill">Live Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="badge bg-primary">Flutter</span>
+                <span class="badge bg-secondary">Dart</span>
+                <span class="badge bg-info">Cloud Firestore</span>
+              </div>
+              <h5>Travel Companion</h5>
+              <p>Mobile app for travelers featuring itinerary planning, local recommendations, and real-time translations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <a href="#" class="btn btn-primary rounded-pill" id="loadMoreProjects">Load More Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Modals -->
+  <!-- Project Modal 1 -->
+  <div class="modal fade" id="projectModal1" tabindex="-1" aria-labelledby="projectModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="projectModalLabel1">E-Commerce Platform</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://via.placeholder.com/1200x600.png?text=E-Commerce+Platform+Details" alt="E-Commerce Platform" class="img-fluid mb-4">
+          <div class="row">
+            <div class="col-md-8">
+              <h4>Project Overview</h4>
+              <p>A full-featured e-commerce platform designed to provide a seamless shopping experience. The platform includes comprehensive product management, advanced search and filtering, shopping cart functionality, secure checkout process, and user account management.</p>
+              
+              <h4 class="mt-4">Key Features</h4>
+              <ul>
+                <li>Responsive design optimized for all devices</li>
+                <li>Product catalog with categories, filters, and search</li>
+                <li>User authentication and profile management</li>
+                <li>Shopping cart and wishlist functionality</li>
+                <li>Secure payment processing with multiple options</li>
+                <li>Order tracking and management</li>
+                <li>Admin dashboard for inventory and order management</li>
+                <li>Analytics and reporting tools</li>
+              </ul>
+              
+              <h4 class="mt-4">Development Challenges</h4>
+              <p>One of the main challenges was optimizing the database queries for large product catalogs without compromising performance. Implemented data caching strategies and pagination to ensure fast loading times even with thousands of products.</p>
+            </div>
+            <div class="col-md-4">
+              <div class="project-details-sidebar">
+                <h5>Project Details</h5>
+                <ul class="list-unstyled">
+                  <li><strong>Client:</strong> RetailTech Inc.</li>
+                  <li><strong>Duration:</strong> 4 months</li>
+                  <li><strong>Completion:</strong> June 2023</li>
+                </ul>
+                
+                <h5 class="mt-4">Technologies</h5>
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-check-circle-fill text-primary me-2"></i>React.js</li>
+                  <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Node.js</li>
+                  <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Express.js</li>
+                  <li><i class="bi bi-check-circle-fill text-primary me-2"></i>MongoDB</li>
+                  <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Redux</li>
+                  <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Stripe API</li>
+                  <li><i class="bi bi-check-circle-fill text-primary me-2"></i>AWS S3</li>
+                </ul>
+                
+                <div class="mt-4">
+                  <a href="#" class="btn btn-primary w-100 mb-2">View Live Demo</a>
+                  <a href="#" class="btn btn-outline-primary w-100">View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Other modals would follow the same pattern -->
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section-padding bg-light">
+    <div class="container" data-aos="fade-up">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-8 text-center">
+          <h6 class="text-primary fw-bold">TESTIMONIALS</h6>
+          <h2 class="section-title">What Clients Say</h2>
+          <div class="separator mx-auto"></div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-12">
+          <div class="testimonial-carousel">
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <!-- Testimonial 1 -->
+                <div class="carousel-item active">
+                  <div class="testimonial-item text-center">
+                    <div class="testimonial-img mb-4">
+                      <img src="https://via.placeholder.com/150x150.png?text=Client" alt="Client Testimonial" class="rounded-circle">
+                    </div>
+                    <div class="testimonial-content">
+                      <div class="testimonial-rating mb-3">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <p class="testimonial-text">"Kritika transformed our business with her exceptional development skills. She took our vague concept and turned it into a robust, user-friendly platform that exceeded our expectations. Her attention to detail and problem-solving abilities are truly impressive."</p>
+                      <h5>Sarah Johnson</h5>
+                      <p class="testimonial-position">CEO, TechStart Solutions</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="carousel-item">
+                  <div class="testimonial-item text-center">
+                    <div class="testimonial-img mb-4">
+                      <img src="https://via.placeholder.com/150x150.png?text=Client+2" alt="Client Testimonial" class="rounded-circle">
+                    </div>
+                    <div class="testimonial-content">
+                      <div class="testimonial-rating mb-3">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <p class="testimonial-text">"Working with Kritika was an absolute pleasure. She not only delivered a stunning website that perfectly captured our brand identity but also provided valuable insights that improved our overall digital strategy. Her technical expertise combined with her creative approach is a rare and valuable combination."</p>
+                      <h5>Michael Rodriguez</h5>
+                      <p class="testimonial-position">Marketing Director, Innovate Labs</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="carousel-item">
+                  <div class="testimonial-item text-center">
+                    <div class="testimonial-img mb-4">
+                      <img src="https://via.placeholder.com/150x150.png?text=Client+3" alt="Client Testimonial" class="rounded-circle">
+                    </div>
+                    <div class="testimonial-content">
+                      <div class="testimonial-rating mb-3">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                      </div>
+                      <p class="testimonial-text">"Kritika's expertise in AI integration gave our application a competitive edge in the market. She was able to simplify complex processes and create an intuitive user experience that our customers love. Her commitment to quality and ability to meet tight deadlines make her an invaluable development partner."</p>
+                      <h5>Jennifer Chen</h5>
+                      <p class="testimonial-position">Product Manager, DataVision Analytics</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-controls mt-4">
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                  <i class="bi bi-arrow-left"></i>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                  <i class="bi bi-arrow-right"></i>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-padding">
+    <div class="container" data-aos="fade-up">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-8 text-center">
+          <h6 class="text-primary fw-bold">GET IN TOUCH</h6>
+          <h2 class="section-title">Let's Work Together</h2>
+          <div class="separator mx-auto"></div>
+        </div>
+      </div>
+      
+      <div class="row g-5">
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="contact-info-card">
+            <h3 class="mb-4">Contact Information</h3>
+            <p>Feel free to reach out to me for any inquiries or collaboration opportunities. I'm always open to discussing new projects and ideas.</p>
+            
+            <div class="contact-item d-flex align-items-center mt-4">
+              <div class="contact-icon">
+                <i class="bi bi-geo-alt-fill"></i>
+              </div>
+              <div class="contact-text">
+                <h5>Location</h5>
+                <p>San Francisco, CA, United States</p>
+              </div>
+            </div>
+            
+            <div class="contact-item d-flex align-items-center mt-4">
+              <div class="contact-icon">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+              <div class="contact-text">
+                <h5>Email</h5>
+                <p>contact@kritikasubedi.com</p>
+              </div>
+            </div>
+            
+            <div class="contact-item d-flex align-items-center mt-4">
+              <div class="contact-icon">
+                <i class="bi bi-telephone-fill"></i>
+              </div>
+              <div class="contact-text">
+                <h5>Phone</h5>
+                <p>+1 (555) 123-4567</p>
+              </div>
+            </div>
+            
+            <div class="social-links mt-5">
+              <h5 class="mb-3">Connect With Me</h5>
+              <div class="d-flex gap-3">
+                <a href="#" class="social-icon" data-bs-toggle="tooltip" title="LinkedIn">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="#" class="social-icon" data-bs-toggle="tooltip" title="GitHub">
+                  <i class="bi bi-github"></i>
+                </a>
+                <a href="#" class="social-icon" data-bs-toggle="tooltip" title="Twitter">
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="#" class="social-icon" data-bs-toggle="tooltip" title="Instagram">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" data-bs-toggle="tooltip" title="Medium">
+                  <i class="bi bi-medium"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="contact-form-card">
+            <h3 class="mb-4">Send Me A Message</h3>
+            <form id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="nameInput" placeholder="Your Name" required>
+                    <label for="nameInput">Your Name</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="email" class="form-control" id="emailInput" placeholder="Your Email" required>
+                    <label for="emailInput">Your Email</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="subjectInput" placeholder="Subject" required>
+                    <label for="subjectInput">Subject</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea class="form-control" id="messageInput" placeholder="Your Message" style="height: 150px" required></textarea>
+                    <label for="messageInput">Your Message</label>
+                  </div>
+                </div>
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-primary btn-lg rounded-pill w-100" id="submitButton">
+                    <span class="submit-text">Send Message</span>
+                    <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                  </button>
+                </div>
+              </div>
             </form>
           </div>
         </div>
-      </section>
-  </body>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h4 class="text-white mb-4">Kritika Subedi</h4>
+          <p>Creating innovative digital solutions that solve real-world problems. Let's transform your ideas into reality.</p>
+          <div class="footer-social-links mt-4">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-github"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h4 class="text-white mb-4">Quick Links</h4>
+          <ul class="footer-links list-unstyled">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h4 class="text-white mb-4">Newsletter</h4>
+          <p>Subscribe to receive updates on my latest projects, tech articles, and industry insights.</p>
+          <form class="footer-newsletter mt-4">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email" required>
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">&copy; 2024 Kritika Subedi. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">Designed and developed with <i class="bi bi-heart-fill text-danger"></i></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" id="backToTop">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <!-- Success Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Message Sent Successfully!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <div class="success-icon mb-4">
+            <i class="bi bi-check-circle-fill"></i>
+          </div>
+          <p>Thank you for reaching out! I'll get back to you as soon as possible.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
 </html>
